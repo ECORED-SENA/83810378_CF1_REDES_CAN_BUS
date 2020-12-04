@@ -1,0 +1,179 @@
+.container
+    .header-ecored
+        h1 4. Características de los tipos de protocolos de comunicación.
+    .jumbotron.bg-white
+        .sub-ecored.mt-5#tema4_1
+            h2 4.1 UART
+
+            p Receptor/transmisor asíncrono universal (Universal Asynchronous Receiver/Transmiter) es un protocolo de comunicación a través de datos seriados (Serial Data).
+
+            p La velocidad de transmisión es el baudio o número de bits por segundo (bps). En comparación con las velocidades actuales, es extremadamente lenta. Su velocidad es de 8 kbit/s – 8,2 kbit/s.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_1.png").img-fluid
+
+            p.mt-5 La tensión de la señal es de 5,0 Volts y se hace a través de código binario (0 – lógico, 1 – lógico). 
+
+        .sub-ecored.mt-5#tema4_2
+            h2 4.2 SAE J1850
+
+            p El protocolo SAE J1850 aplica especialmente para las marcas General Motors y Ford.
+
+            p General Motors usa el protocolo SAE J1850-VPM (Variable Pulse Width). La tensión de la señal es de 7,0 Volts y su señal siempre es variable y de ahí su nombre.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_2.png").img-fluid
+
+            p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+            p Ford usa el protocolo SAE J1850-PWM usando dos cables que se conectan al DLC en los pines 2 y 10. La señal que aplica es PWM (Pulse Width Modulation – ancho de pulso modulado).
+            p La velocidad del protocolo es de 41,7 kit/s y su amplitud es de 5,0 Volts.
+
+
+        .sub-ecored.mt-5#tema4_3
+            h2 4.3 ISO 9141-2
+
+            p El protocolo ISO 9141-2 tiene la velocidad de UART, es decir, 8,0 Kbit/s. Utiliza los pines 7 y de manera opcional el pin 15. Los datos se envían en una sola dirección. Actualmente es usado en marcas como Volvo, Seat, Volkswagen, Porsche, Smart y otros.
+
+        .sub-ecored.mt-5#tema4_4
+            h2 4.4 KWP2000
+
+            p El protocolo ISO 14230 KWP2000. Significa Keyword Protocol o protocolo de llave mundial.  Este utiliza el pin 7 y de manera opcional el pin 15 a la velocidad de 10,4 kbit/s.  El protocolo se utilizó después del año 2000 por fabricantes como Renault, Peugeot y Daewoo.
+
+        .sub-ecored.mt-5#tema4_5
+            h2 4.5 CAN BUS HS
+
+            p CAN BUS (Controller Area Network) se desarrolló como un protocolo de comunicación entre módulos de control en el vehículo en 1985 por BOSCH. A medida que los módulos se fueron incrementando en los vehículos, se llegó a la necesidad de implementar el sistema ya que, de lo contrario, el número de cableados se incrementaría causando inconvenientes en su manejo y aumento del peso final del vehículo.
+
+            p La velocidad del protocolo CAN BUS HS (High Speed) es arriba de 125 kbit/s, por lo tanto, es común hablar de 256 kbit/s o de 500 kbit/s.
+
+            p Otras marcas pueden especificar que 256 kbit/ es media velocidad (MS) y 500 kbit/ es alta velocidad (HS).
+
+            p A través de los cables del bus, se envían los mensajes entre los módulos. Cada trama del mensaje se compone de 7 secciones.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_3.png").img-fluid
+
+            p.mt-5 Este sistema se caracteriza por la alta capacidad de transmitir mensajes sin colisionar entre ellos y se debe a la capacidad de priorización.
+
+            p Para realizar esto, cuando existen varias intenciones de transmitir mensajes en varios módulos al tiempo, el primer bit expresa que se inicia el mensaje, comparándolo con un e-mail es como saludar; seguidamente, en el campo de estado que se compone de 11 bit, de los cuales, los tres primeros determinan la priorización del mensaje.
+
+            p Existen bits dominantes si su valor lógico es “0” y bits recesivos si el valor lógico es “1”.
+                | #[br] Cuando dos o más módulos van a enviar mensajes a través de la red, el que tenga el mayor número de bits dominantes, es quien envía el mensaje. 
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_4.png").img-fluid
+
+            p.mt-5 Comparando informaciones, podemos decir que las señales del módulo ABS/EPS tendrán mayor prioridad que los mensajes del módulo de transmisión (TCM).
+
+            p El mensaje se encuentra en el campo de datos. Los anteriores bits son en preparación del envío y con los posteriores se confirma la entrega del mensaje.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_5.png").img-fluid
+
+            p.mt-5 La imagen muestra una señal de CAN BUS H y CAN BUS L. Es importante diferenciar estas expresiones para evitar confusiones.
+
+            p De acuerdo a los expuesto se puede resumir lo siguiente:
+
+            ul.list-unstyled
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | La señal se toma en los pines 6 y 14 del conector de diagnóstico – DLC. La señal entre 2,5 V y 3,75 V corresponde al pin 6 CAN Bus-High.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | La señal entre 1,25 V y 2,50 V es tomada en el pin 14 CAN Bus-Low.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Estas señales son las mismas, solo que una es un reflejo en espejo de la otra y no difieren sus velocidades.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Dependiendo de la marca pueden ser usados otros pines del DLC para sacar las señales con diferentes velocidades.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Para el caso del protocolo de 500 kbit/s, cada bit tiene un período de 2 µs.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | CAN BUS-HS, se usa en sistemas de tracción y seguridad del vehículo como motor, tracción, SRS bolsas de aire, frenos ABS/EPS y dirección entre otros.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | El equipo FSA-740 Bosch llegó a varios centros de formación del Sena como uno de los elementos del laboratorio Diesel. 
+            
+            p Este equipo tiene la opción de osciloscopio universal y también tiene una función especial para ver la forma de onda CAN Bus, la cual fija los parámetros para tomar la señal de manera inmediata, como es el caso de la foto anterior.
+
+        .sub-ecored.mt-5#tema4_6
+            h2 4.6 CAN BUS LS
+
+            p El protocolo CAN Bus de baja velocidad (LS) es idéntico al anterior en cuanto a su estructura, pero a una velocidad menor. La velocidad del protocolo es de hasta 125 kbit/s. Se utiliza en sistemas de confort y carrocería que no requieren respuestas inmediatas, sin embargo, cada bit tiene una duración de 8 µs o 16 µs. 
+
+            p La tensión va aparentemente de 0,0 V a 5,0 V. Sin embargo, la señal CAN-High (rojo) va de 0,0 Volts a 3,5 Volts y para CAN-Low (azul) la señal va desde 1,5 Volts hasta 5,0 Volts.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_6.png").img-fluid
+
+            p.mt-5 En dos de los circuitos, se encuentran resistores de 120 Ω conectados en paralelo, cuya función es la de eliminar el eco de las señales. Estos resistores comúnmente se encuentran al interior de dos módulos de control.
+
+        .sub-ecored.mt-5#tema4_7
+            h2 4.7 LIN BUS
+
+            P LIN BUS o Local Interconnect Network. Este protocolo se usa en sistemas simples de confort y carrocería. También en el sistema de carga.  Con este protocolo se interconectan módulos o componentes que pueden ser sensores, actuadores o módulos de control.
+
+            p Sus características son:
+
+            ul
+                li
+                    P El circuito es de un solo cable y está compuesto de cobre. No es indispensable que tenga blindaje.
+                li
+                    P Su velocidad se encuentra entre 1 kbit/s y 20 kbit/s.
+                li
+                    P La señal es de 12 Volts, por lo tanto, la observamos cambiar entre 0 V y 12 V.
+                li 
+                    P El sistema se basa en el concepto de un maestro y esclavo. Puede haber un módulo de control que está conectada a red CAN Bus, haciendo de módulo maestro y puede tener hasta 16 unidades.
+                li
+                    P El diagnóstico de las unidades esclavas se realiza a través del módulo maestro conectado a la red CAN Bus.
+                li
+                    P El protocolo LIN Bus se reconoce porque comienza con una señal alta y luego pasa a señal baja (que dura 13 bit) y luego realiza cambios entre 1 y 0 por diez veces. 
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_7.png").img-fluid
+
+            p.mt-5 En el gráfico se muestra unas señales más cortas que las otras. Lo que quiere decir es que en el protocolo hay 2 unidades.
+
+        .sub-ecored.mt-5#tema4_8
+            h2 4.8 MOST
+
+            p El uso del protocolo MOST- Media Oriented Systems Transport, está destinado a la transmisión de audio y video, conocido como sistemas de infotenimiento o infotainment. Por lo tanto, es imprescindible la alta velocidad de la transmisión de datos.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_8.png").img-fluid
+
+            p.mt-5 Sus características son:
+
+            ul.list-unstyled
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | La velocidad máxima de este protocolo es de 22,5 Mbit/s, conocido como MOST 25.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | También existen otros protocolos con velocidades de 50 Mbit/s conocido como MOST 50 y MOST 150 con velocidades máximas de 150 Mbit/s
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Los cables de fibra óptica transmiten las señales en forma de impulsos de luz.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | El sistema está conectado en anillo, que se convierte en un circuito serie cerrado. 
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Pueden conectarse hasta 64 unidades y una de ellas es la unidad maestra y las restantes se convierten en esclavas.
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | El sistema está compuesto por un fotodiodo y un diodo luminoso. El fotodiodo recibe las señales luminosas y las transforma en señales eléctricas para luego enviarlas al transceptor. Cuando se van a enviar señales, el diodo luminoso toma las señales del transceptor MOST y las convierte en señales luminosas.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_4/img_9.png").img-fluid   
+
+        .sub-ecored.mt-5#tema4_9
+            h2 4.9 Flexray
+
+            p A medida que el número de módulos de control ha ido aumentando en los vehículos y cuando varios módulos quieren comunicarse al tiempo, los mensajes corren mayor riesgo de sobrecargarse con la posibilidad de bloquearse, es allí cuando es importante el flexaray, dado que cuenta con las siguientes características:
+
+            ul.list-unstyled
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Flexray cuenta con una velocidad máxima de 10 Mbit/s. Puede tener cables de bus convencionales o usar un bus óptico. 
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | Se puede configurar en diferentes tipologías como punto a punto, de bus, de estrella y de estrella pasiva. Su aplicación tiene que ver con sistemas relacionados con la seguridad activa, seguridad pasiva, carrocería y confort.  
+                li.justify-content-center
+                    i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                    | El objetivo de Flexray es tener la capacidad de enviar alto volumen de información siendo tolerante a las fallas del sistema.

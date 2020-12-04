@@ -1,0 +1,121 @@
+.container
+    .header-ecored
+        h1 3. Fundamentos de los conectores de diagnóstico - Data Link Connector DLC
+    .jumbotron.bg-white
+        p El conector de diagnóstico está reglamentado con la norma SAE J1962_201207 y se refiere al conector del vehículo y el conector del scanner. Las características para el conector del vehículo son su ubicación, el acceso del conector, el diseño, la asignación de los pines y los requisitos eléctricos del conector.
+
+        p El conector de diagnóstico es más conocido con sus siglas en inglés DLC - Data Link Connector.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_1.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 El conector en el vehículo tiene pines hembra y su estructura tiene forma de trapecio (se muestra en color naranja). Los números del 1 al 8 se encuentran al lado de la línea más larga. De esta manera, cuando algún fabricante instala el DLC en otra posición, el técnico la usa como referencia para hacer la identificación.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_2.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 Los pines se encuentran en un rectángulo (se muestra de color rojo) y se alinean del 1 al 8 y del 9 al 16 en dos filas, de izquierda a derecha.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_3.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p Sin importar el tipo de protocolo que el conector comunique, el DLC siempre tendrá 3 pines de uso obligatorio. Los demás dependen del o de los protocolos que el vehículo disponga. Los pines son:
+
+        ul.list-unstyled
+            li.justify-content-center
+                i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                | Pin 4: tierra de chasis
+            li.justify-content-center
+                i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                | Pin 5: tierra de señal
+            li.justify-content-center
+                i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                | Pin 16: corriente directa desde la batería B+
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_4.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 Los demás pines solo van en el conector, si el vehículo cuenta con el protocolo correspondiente. De esta manera identificando los pines podemos saber los que lleva instalados, a saber:
+
+        ul
+            li
+                p Pin 1: específico del fabricante
+            li
+                p Pin 2: SAE J1850-PWM POS (+) o SAE J1850-VPM POS (+)
+            li
+                p Pin 3: específico del fabricante
+            li 
+                p Pin 4: chassis Ground en todos los protocolos
+            li 
+                p Pin 5: signal Ground en todos los protocolos
+            li
+                p Pin 6: ISO 15765-4 CAN Bus High
+            li 
+                p Pin 7: ISO 9141-2 K-Line o ISO 14230-4 KWP2000 K-Line
+            li
+                p Pin 8: específico del fabricante
+            li
+                p Pin 9: específico del fabricante
+            li 
+                p Pin 10: SAE J1850-PWM NEG (-)
+            li
+                p Pin 11: específico del fabricante
+            li
+                p Pin 12: específico del fabricante
+            li 
+                p Pin 13: específico del fabricante
+            li
+                p Pin 14: ISO 15765-4 CAN Bus Low
+            li
+                p Pin 15: ISO 9141-2 L-Line o ISO 14230-4 KWP2000 L-Line
+            li 
+                p Pin 16: B+ en todos los protocolos
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_5.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 El conector del scanner tiene pines machos y es una imagen en espejo del DLC, la foto muestra esta condición.
+
+        p Los pines que se encuentran activos en el conector de diagnóstico en el protocolo de comunicación SAE J1850 PWM son el 2 y 10 además de los obligatorios 4, 5 y 16. Los modelos de Ford llevan este protocolo, sus pines son
+
+        ul
+            li
+                p Pin 2:  SAE J1850-PWM POS (+)
+            li
+                p Pin 10: SAE J1850-PWM NEG (-)
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_6.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 De otra parte, los pines activos en el protocolo de comunicación CAN BUS son el 6 (Pin 6: ISO 15765-4 CAN Bus High) y 14 (Pin 14: ISO 15765-4 CAN Bus Low) además de los obligatorios 4, 5 y 16.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_7.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 El protocolo ISO 9141-2 utiliza los pines 7 y 15 además de los obligatorios 4, 5 y 16, tal como se muestra a continuación.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_8.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 Ford utiliza 2 tipos de velocidades de CAN BUS. Para tal caso de CAN BUS de baja velocidad lo maneja en los pines 6 y 14 y los de alta velocidad en los pines 3 y 11, además de los pines obligatorios 4, 5 y 16.
+        p El pin 13 es de reprogramación, tal como se muestra a continuación.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_9.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 El protocolo KWP2000 utiliza el pin 7 además de los obligatorios 4, 5 y 16, tal como se muestra a continuación.
+
+        img.mt-5.img-a(src="assets/images/pages/tema_3/img_10.png").img-fluid
+
+        p.text-center Imagen tomada de Manual Curso Ford Comunicación Multiplex CPF
+
+        p.mt-5 Los fabricantes también pueden combinar varios tipos de protocolos, solo es prestar atención a los pines que se encuentran activos en el conector de diagnóstico.

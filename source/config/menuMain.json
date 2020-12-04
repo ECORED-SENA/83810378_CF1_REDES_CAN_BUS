@@ -1,0 +1,162 @@
+[
+  {
+    "icon": "fa fa-home",
+    "slug": "external",
+    "title": "Volver al inicio",
+    "path": "index.html"
+  },  
+  { 
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "fundamentos",
+    "title": "1. Fundamentos en redes de comunicación",
+    "breadcrumb": ["Inicio","Tema 1"],
+    "path": "pages/1-tema.html",    
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "1.1 Introducción",
+        "anchor": "tema1_1"
+      },   
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "1.2 Estructura, organización, modo de comunicación",
+        "anchor": "tema1_2"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "1.3 Sistema binario, octal, decimal y hexadecimal",
+        "anchor": "tema1_3"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "1.4 Velocidades de transmisión",
+        "anchor": "tema1_4"
+      }      
+    ]   
+  },
+  { 
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "conceptos",
+    "title": "2. Conceptos de los componentes básicos de los módulos de control",
+    "breadcrumb": ["Inicio","Tema 2"],
+    "path": "pages/2-tema.html",    
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "conceptos",
+        "title": "2.1 Introducción",
+        "anchor": "tema2_1"
+      },   
+      {
+        "icon": "fa fa-play-circle",
+        "slug": "conceptos",
+        "title": "2.2 Microcontrolador",
+        "anchor": "tema2_2"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "conceptos",
+        "title": "2.3 Memorias: RAM, ROM, EPROM",
+        "anchor": "tema2_3"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "conceptos",
+        "title": "2.4 Reloj",
+        "anchor": "tema2_4"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "conceptos",
+        "title": "2.5 Convertidor A/D",
+        "anchor": "tema2_5"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "conceptos",
+        "title": "2.6 Input /Output",
+        "anchor": "tema2_6"
+      } 
+             
+    ] 
+  },
+  { 
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "conectores",
+    "title": "3. Fundamentos de los conectores de diagnóstico - Data Link Connector DLC",
+    "breadcrumb": ["Inicio","Tema 3"],
+    "path": "pages/3-tema.html"
+  },
+  { 
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "tipos",
+    "title": "4. Características de los tipos de protocolos de comunicación.",
+    "breadcrumb": ["Inicio","Tema 4"],
+    "path": "pages/4-tema.html",    
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.1 UART",
+        "anchor": "tema4_1"
+      },   
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.2 SAE J1850",
+        "anchor": "tema4_2"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.3 ISO 9141-2",
+        "anchor": "tema4_3"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.4 KWP2000",
+        "anchor": "tema4_4"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.5 CAN BUS HS",
+        "anchor": "tema4_5"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.6 CAN BUS LS",
+        "anchor": "tema4_6"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.7 LIN BUS",
+        "anchor": "tema4_7"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.8 MOST",
+        "anchor": "tema4_8"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "tipos",
+        "title": "4.9 Flexray",
+        "anchor": "tema4_9"
+      } 
+             
+    ] 
+  }
+]

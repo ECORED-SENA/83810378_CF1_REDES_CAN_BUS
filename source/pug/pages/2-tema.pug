@@ -1,0 +1,158 @@
+.container
+    .header-ecored
+        h1 2. Conceptos de los componentes básicos de los módulos de control
+    .jumbotron.bg-white
+        .sub-ecored.mt-5#tema2_1
+            h2 2.1 Introducción
+
+        p La composición de los módulos de control, contienen los mismos componentes principales que cualquier computador. Sin ser un programa de reparación de computadoras, se estudiará de forma básica los elementos principales y sus funciones.
+
+        .sub-ecored.mt-5#tema2_2
+            h2 2.2 Microcontrolador
+
+        p Los microcontroladores son circuitos integrados programables que permiten realizar instrucciones una tras otra, cuya función es poder controlar procesos. Son muy rápidos debido a que en su interior tienen componentes como memorias, unidad de control y unidad de procesamiento, periféricos como temporizadores, convertidores AC/CD, puertos de comunicación y contadores y los puertos de entrada y salida. Se podría decir, que es como un módulo dentro del módulo de control. Por lo tanto, al tener todos los elementos descritos en su interior, puede realizar procesos en menor tiempo.
+
+        p La unidad de proceso realiza operaciones lógico-matemáticas. Dentro de esta se encuentra la unidad lógico matemática, el acumulador y el registro. Se realiza el procesamiento de las señales, ejecutando cálculos matemáticos de alta complejidad, comparado con los mapas de información del vehículo en las memorias y sus conclusiones serán órdenes que efectuarán a través de otro elemento, llamado actuadores.
+
+        p Visualice el siguiente video para ampliar la información
+
+        .header-arrow_1.mt-5 
+            h2.text-center ¿Microcontrolador - Qué es? y sus partes – microcontroller
+
+        .embed-responsive.embed-responsive-16by9.mt-5
+              iframe.embed-responsive-item(width='560', height='315', src='https://www.youtube.com/embed/C_CcRGIwqrE', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+
+        .sub-ecored.mt-5#tema2_3
+            h2 2.3 Memorias RAM, ROM, PROM, EPROM
+
+
+        .row.justify-content-center.mt-5
+            .col-auto
+                img(src="assets/images/pages/tema_2/img_1.png").img-fluid
+            .col
+                p La memoria ROM permite llamada de solo lectura, puede programarse una vez y su programa se almacena de manera permanente. Es una memoria de funcionamiento, que permite aclarar el control de los direccionamientos de la información.
+
+                p Por ser memoria de funcionamiento, los fabricantes sacan los mismos tipos de computadoras y así son comercializadas. A esto se le llama computadora en blanco y por tanto cuando se monta en el vehículo se programa con las especificaciones técnicas del tipo y modelo.
+
+        .row.justify-content-center.mt-5
+            .col-auto
+                img(src="assets/images/pages/tema_2/img_2.png").img-fluid
+            .col
+                p La memoria de acceso aleatorio RAM, es una memoria de lectura y escritura. Los datos no son almacenados de manera permanente, sino que van cambiando a medida que los valores de las variables van llegando.
+
+                p A manera de ejemplo el sensor de velocidad del motor CKP (variable), su memoria presenta esta variable que cambia muchas veces por segundo debido al funcionamiento del motor alternativo. Con este valor y la información de la cantidad de aire que ingresa, la computadora puede calcular el ancho de pulso básico del inyector. Pero la información no queda almacenada en la memoria de la computadora.
+
+        .row.justify-content-center.mt-5
+            .col-auto
+                img(src="assets/images/pages/tema_2/img_3.png").img-fluid
+            .col
+                p La memoria PROM almacena la información de los datos técnicos del vehículo. En esta memoria se encuentran almacenados los miles de mapas con los que el microcontrolador consulta para realizar los cálculos y ajustes que afinarán la entrega de combustible y los ajustes de los saltos de la chispa especialmente.
+
+        .row.justify-content-center.mt-5
+            .col-auto
+                img(src="assets/images/pages/tema_2/img_4.png").img-fluid
+            .col
+                p La memoria EEPROM es una memoria borrable que también almacena los datos técnicos específicos del vehículo. La otra situación, es que como se deja programar, las casas fabricantes ofrecen recalibraciones de los módulos de control, por lo que actualmente se ha abierto un mercado importante en la reprogramación de computadoras de vehículos.
+
+        table.table.table-nowrap.justify-content-center.mt-5
+            thead
+                tr
+                    td(colspan="5").color-table_1.text-center 
+                        h2 CLASIFICACIÓN SEGUN EL TIPO DE MEMORIA
+                    
+                    
+            tbody
+                tr.color-table_2
+                    td Tipo de memoria
+                    td Clave
+                    td Borrado
+                    td Mecanismo de #[br]Escritura
+                    td Volatilidad
+
+                tr.color-table_3
+                    td RAM
+                    td Lectura / Escritura
+                    td Electricamente #[br]por byte
+                    td Electricamente
+                    td Volátil
+
+                tr.color-table_3
+                    td ROM
+                    td Sólo Lectura
+                    td No es posible
+                    td Mediante máscaras
+                    td No es Volátil
+
+                tr.color-table_3
+                    td PROM
+                    td Sólo Lectura
+                    td No es posible
+                    td Eléctricamente
+                    td No es Volátil
+
+                tr.color-table_3
+                    td EPROM
+                    td Sobre todo Lectura
+                    td Luz ultravioleta, chip #[br]Complejo
+                    td Eléctricamente
+                    td No es Volátil
+
+                tr.color-table_3
+                    td EEPROM
+                    td Sobre todo Lectura
+                    td Electricamente #[br]por byte
+                    td Eléctricamente
+                    td No es Volátil
+
+        .sub-ecored.mt-5#tema2_4 
+            h2 2.4 Reloj 
+
+        p Consta de un circuito oscilador de cuarzo que produce una señal, dicha señal va directamente al generador de reloj y este en su interior, multiplica o divide las señales para los componentes de la computadora, a saber: el microcontrolador, las memorias y los demás chips de la computadora.
+
+        p El reloj se puede definir como la frecuencia en que todo el sistema electrónico de la computadora trabaja. Son pulsos sincronizados que pasan a la transmisión, de modo que la información pueda desplazarse entre los componentes internos sin que ocurran colisiones de información. En el reloj se debe tener en cuenta lo siguiente:
+
+        ul.list-unstyled
+            li.justify-content-center
+                i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                | La frecuencia emitida se mide en Hertz y sus valores son de gigas por segundo.
+            li.justify-content-center
+                i.fa.fa-angle-right.fa-lg.mr-3.text-color-orange
+                | La velocidad del reloj determina el desempeño de las computadoras.
+
+        .sub-ecored.mt-5#tema2_5 
+            h2 2.5 Convertidor A/D 
+
+            p También denominados ADC – Analog to Digital Coverter - Convertidor análogo a digital.
+
+            p El procesador solo trabaja con señales digitales (sistema binario) y varios sensores le envían la información a través de señales análogas, como lo es el sensor de temperatura del motor o señales que llevan a la posición del pedal del acelerador. Debido a esto, se hace necesario transformar estas señales de análogas a digitales.
+
+            img.mt-5.img-a(src="assets/images/pages/tema_2/img_5.png").img-fluid
+
+        .sub-ecored.mt-5#tema2_6 
+            h2 2.6. Input / Output
+
+            p También llamados de entrada y salida E/S. Pueden ser las señales o los dispositivos que las generan. Para este caso, lo entenderemos como las señales que son recibidas por los sensores y las señales que son enviadas a los actuadores.
+
+            p Los sensores envían las señales de las variables medidas en el sistema como son temperatura, velocidad, posición (input), y los actuadores ejecutan las acciones u órdenes (proceso) que el microcontrolador calculó (output).
+
+            img.mt-5.img-a(src="assets/images/pages/tema_2/img_6.png").img-fluid
+
+        .jumbotron.jum-color_1.mt-5
+            .row.justify-content-center.mt-5
+                .col-auto
+                    img(src="assets/images/pages/tema_2/img_7.png").img-fluid
+                .col
+                    p #[strong Es necesario tener en cuenta que:]
+
+                    ul
+                        li
+                            p La red CAN BUS se compone básicamente de resistencias, controlador, transceptor y los cables.
+                        li
+                            p El controlador recibe la información del interior del módulo de control y se encarga de crear el protocolo.
+                        li 
+                            p El transceptor recibe la información del controlador y la convierte en señales eléctricas. Cuando los mensajes entran al módulo lo hacen a través del transceptor y luego pasan al controlador.
+                        li
+                            p A través de los cables del bus se transmiten las señales del sistema.
+                        li
+                            p En los extremos del sistema se encuentran las resistencias cerrando el circuito. Su función es limitar el eco de las señales.

@@ -1,0 +1,147 @@
+<div class="container">
+    <div class="header-ecored">
+        <h1>2. Conceptos de los componentes básicos de los módulos de control</h1>
+    </div>
+    <div class="jumbotron bg-white">
+        <div class="sub-ecored mt-5" id="tema2_1">
+            <h2>2.1 Introducción</h2>
+        </div>
+        <p>La composición de los módulos de control, contienen los mismos componentes principales que cualquier computador. Sin ser un programa de reparación de computadoras, se estudiará de forma básica los elementos principales y sus funciones.</p>
+        <div class="sub-ecored mt-5" id="tema2_2">
+            <h2>2.2 Microcontrolador</h2>
+        </div>
+        <p>Los microcontroladores son circuitos integrados programables que permiten realizar instrucciones una tras otra, cuya función es poder controlar procesos. Son muy rápidos debido a que en su interior tienen componentes como memorias, unidad de control y unidad de procesamiento, periféricos como temporizadores, convertidores AC/CD, puertos de comunicación y contadores y los puertos de entrada y salida. Se podría decir, que es como un módulo dentro del módulo de control. Por lo tanto, al tener todos los elementos descritos en su interior, puede realizar procesos en menor tiempo.</p>
+        <p>La unidad de proceso realiza operaciones lógico-matemáticas. Dentro de esta se encuentra la unidad lógico matemática, el acumulador y el registro. Se realiza el procesamiento de las señales, ejecutando cálculos matemáticos de alta complejidad, comparado con los mapas de información del vehículo en las memorias y sus conclusiones serán órdenes que efectuarán a través de otro elemento, llamado actuadores.</p>
+        <p>Visualice el siguiente video para ampliar la información</p>
+        <div class="header-arrow_1 mt-5">
+            <h2 class="text-center">¿Microcontrolador - Qué es? y sus partes – microcontroller</h2>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9 mt-5"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/C_CcRGIwqrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+        <div class="sub-ecored mt-5" id="tema2_3">
+            <h2>2.3 Memorias RAM, ROM, PROM, EPROM</h2>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-auto"><img class="img-fluid" src="assets/images/pages/tema_2/img_1.png" /></div>
+            <div class="col">
+                <p>La memoria ROM permite llamada de solo lectura, puede programarse una vez y su programa se almacena de manera permanente. Es una memoria de funcionamiento, que permite aclarar el control de los direccionamientos de la información.</p>
+                <p>Por ser memoria de funcionamiento, los fabricantes sacan los mismos tipos de computadoras y así son comercializadas. A esto se le llama computadora en blanco y por tanto cuando se monta en el vehículo se programa con las especificaciones técnicas del tipo y modelo.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-auto"><img class="img-fluid" src="assets/images/pages/tema_2/img_2.png" /></div>
+            <div class="col">
+                <p>La memoria de acceso aleatorio RAM, es una memoria de lectura y escritura. Los datos no son almacenados de manera permanente, sino que van cambiando a medida que los valores de las variables van llegando.</p>
+                <p>A manera de ejemplo el sensor de velocidad del motor CKP (variable), su memoria presenta esta variable que cambia muchas veces por segundo debido al funcionamiento del motor alternativo. Con este valor y la información de la cantidad de aire que ingresa, la computadora puede calcular el ancho de pulso básico del inyector. Pero la información no queda almacenada en la memoria de la computadora.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-auto"><img class="img-fluid" src="assets/images/pages/tema_2/img_3.png" /></div>
+            <div class="col">
+                <p>La memoria PROM almacena la información de los datos técnicos del vehículo. En esta memoria se encuentran almacenados los miles de mapas con los que el microcontrolador consulta para realizar los cálculos y ajustes que afinarán la entrega de combustible y los ajustes de los saltos de la chispa especialmente.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-auto"><img class="img-fluid" src="assets/images/pages/tema_2/img_4.png" /></div>
+            <div class="col">
+                <p>La memoria EEPROM es una memoria borrable que también almacena los datos técnicos específicos del vehículo. La otra situación, es que como se deja programar, las casas fabricantes ofrecen recalibraciones de los módulos de control, por lo que actualmente se ha abierto un mercado importante en la reprogramación de computadoras de vehículos.</p>
+            </div>
+        </div>
+        <table class="table table-nowrap justify-content-center mt-5">
+            <thead>
+                <tr>
+                    <td class="color-table_1 text-center" colspan="5">
+                        <h2>CLASIFICACIÓN SEGUN EL TIPO DE MEMORIA</h2>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="color-table_2">
+                    <td>Tipo de memoria</td>
+                    <td>Clave</td>
+                    <td>Borrado</td>
+                    <td>Mecanismo de <br />Escritura</td>
+                    <td>Volatilidad</td>
+                </tr>
+                <tr class="color-table_3">
+                    <td>RAM</td>
+                    <td>Lectura / Escritura</td>
+                    <td>Electricamente <br />por byte</td>
+                    <td>Electricamente</td>
+                    <td>Volátil</td>
+                </tr>
+                <tr class="color-table_3">
+                    <td>ROM</td>
+                    <td>Sólo Lectura</td>
+                    <td>No es posible</td>
+                    <td>Mediante máscaras</td>
+                    <td>No es Volátil</td>
+                </tr>
+                <tr class="color-table_3">
+                    <td>PROM</td>
+                    <td>Sólo Lectura</td>
+                    <td>No es posible</td>
+                    <td>Eléctricamente</td>
+                    <td>No es Volátil</td>
+                </tr>
+                <tr class="color-table_3">
+                    <td>EPROM</td>
+                    <td>Sobre todo Lectura</td>
+                    <td>Luz ultravioleta, chip <br />Complejo</td>
+                    <td>Eléctricamente</td>
+                    <td>No es Volátil</td>
+                </tr>
+                <tr class="color-table_3">
+                    <td>EEPROM</td>
+                    <td>Sobre todo Lectura</td>
+                    <td>Electricamente <br />por byte</td>
+                    <td>Eléctricamente</td>
+                    <td>No es Volátil</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="sub-ecored mt-5" id="tema2_4">
+            <h2>2.4 Reloj </h2>
+        </div>
+        <p>Consta de un circuito oscilador de cuarzo que produce una señal, dicha señal va directamente al generador de reloj y este en su interior, multiplica o divide las señales para los componentes de la computadora, a saber: el microcontrolador, las memorias y los demás chips de la computadora.</p>
+        <p>El reloj se puede definir como la frecuencia en que todo el sistema electrónico de la computadora trabaja. Son pulsos sincronizados que pasan a la transmisión, de modo que la información pueda desplazarse entre los componentes internos sin que ocurran colisiones de información. En el reloj se debe tener en cuenta lo siguiente:</p>
+        <ul class="list-unstyled">
+            <li class="justify-content-center"><i class="fa fa-angle-right fa-lg mr-3 text-color-orange"></i>La frecuencia emitida se mide en Hertz y sus valores son de gigas por segundo.</li>
+            <li class="justify-content-center"><i class="fa fa-angle-right fa-lg mr-3 text-color-orange"></i>La velocidad del reloj determina el desempeño de las computadoras.</li>
+        </ul>
+        <div class="sub-ecored mt-5" id="tema2_5">
+            <h2>2.5 Convertidor A/D </h2>
+            <p>También denominados ADC – Analog to Digital Coverter - Convertidor análogo a digital.</p>
+            <p>El procesador solo trabaja con señales digitales (sistema binario) y varios sensores le envían la información a través de señales análogas, como lo es el sensor de temperatura del motor o señales que llevan a la posición del pedal del acelerador. Debido a esto, se hace necesario transformar estas señales de análogas a digitales.</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_2/img_5.png" />
+        </div>
+        <div class="sub-ecored mt-5" id="tema2_6">
+            <h2>2.6. Input / Output</h2>
+            <p>También llamados de entrada y salida E/S. Pueden ser las señales o los dispositivos que las generan. Para este caso, lo entenderemos como las señales que son recibidas por los sensores y las señales que son enviadas a los actuadores.</p>
+            <p>Los sensores envían las señales de las variables medidas en el sistema como son temperatura, velocidad, posición (input), y los actuadores ejecutan las acciones u órdenes (proceso) que el microcontrolador calculó (output).</p><img class="mt-5 img-a img-fluid" src="assets/images/pages/tema_2/img_6.png" />
+        </div>
+        <div class="jumbotron jum-color_1 mt-5">
+            <div class="row justify-content-center mt-5">
+                <div class="col-auto"><img class="img-fluid" src="assets/images/pages/tema_2/img_7.png" /></div>
+                <div class="col">
+                    <p><strong>Es necesario tener en cuenta que:</strong></p>
+                    <ul>
+                        <li>
+                            <p>La red CAN BUS se compone básicamente de resistencias, controlador, transceptor y los cables.</p>
+                        </li>
+                        <li>
+                            <p>El controlador recibe la información del interior del módulo de control y se encarga de crear el protocolo.</p>
+                        </li>
+                        <li>
+                            <p>El transceptor recibe la información del controlador y la convierte en señales eléctricas. Cuando los mensajes entran al módulo lo hacen a través del transceptor y luego pasan al controlador.</p>
+                        </li>
+                        <li>
+                            <p>A través de los cables del bus se transmiten las señales del sistema.</p>
+                        </li>
+                        <li>
+                            <p>En los extremos del sistema se encuentran las resistencias cerrando el circuito. Su función es limitar el eco de las señales.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
